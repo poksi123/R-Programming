@@ -1,0 +1,9 @@
+setwd('/Users/marcflores/Desktop/SPR23/R Programming')
+Name = c("Jeb",  "Donald", "Ted", "Marco", "Carly","Hillary", "Berine")
+ABC_Poll = c(4,62,51,21,2,14,15)
+CBS_Poll = c(12,75,43,19,1,21,19)
+Polls = data.frame(ABC_Poll, CBS_Poll, row.names=Name)
+str(Polls)
+Polls
+mean(Polls$ABC_Poll)
+mean(Polls$CBS_Poll)
