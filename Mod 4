@@ -1,0 +1,17 @@
+library(ggplot2)
+
+Frequency = c(.6,.3,.4,.4,.2,.6,.3,.4,.9,.2)
+bloodp = c(103,87,32,42,59,109,78,205,135,176)
+first = c(1,1,1,1,0,0,0,0,'NA',1)  
+second =c(0, 0,1 ,1,0,0,1,1,1,1)
+finaldecision = c(0,1,0,1,0,1,0,1,1,1) 
+
+#first and second decisions 0s = good & 1s = bad
+#final decisions 0s = low & 1s = high
+
+hospital.data=data.frame(Frequency, bloodp, first, second, finaldecision)
+hospital.data
+
+boxplot(hospital.data$bloodp ~ hospital.data$finaldecision, xlab = 'Medical Decision', ylab = 'Blood Pressure')
+
+ 
