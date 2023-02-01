@@ -14,4 +14,6 @@ hospital.data
 
 boxplot(hospital.data$bloodp ~ hospital.data$finaldecision, xlab = 'Medical Decision', ylab = 'Blood Pressure')
 
- 
+hist(hospital.data$bloodp,xlab = 'Blood Pressure', main = 'Histogram of Blood Pressure Frequency')
+
+hist(hospital.data$finaldecision, xlab = 'Final Decision', main = 'Histogram of Final Decision Frequency')
