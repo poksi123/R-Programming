@@ -1,0 +1,9 @@
+A <- matrix(1:100, nrow=10)  
+B <- matrix(1:1000, nrow=10)
+A
+B
+A_Det = det(A)
+A_Det
+B_Det = det(B)
+solve(A)
+solve(B) 
