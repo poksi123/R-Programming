@@ -1,0 +1,18 @@
+##install.packages("pryr")
+require(pryr)
+require(ISLR)
+require(boot)
+##install.packages("plyr")
+library(data.table)
+library(plyr)
+
+student = read.table("Assignment 6 Dataset.txt", header = TRUE, sep = ",")
+student
+sa = ddply(student,"Sex",transform,Grade.Average=mean(Grade))
+write.table(sa, "Sorted_Average")
+write.table(sa,"Sorted_Average", sep = ",")
+newstudent = subset(student,grepl("[iI]", student$Name))
+newstudent
+write.table(newstudent, "Datasubset", sep = ",")
+write.csv(newstudent,"newstudent.csv")
+
