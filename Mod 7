@@ -1,0 +1,16 @@
+ 
+s3_flower = list(sepal_length = 1, sepal_width = 2,
+                 petal_length = 4, petal_width = 3,
+                 species = "daisy")
+flower = setClass("flower", representation(sepal_length = "numeric",
+                                           sepal_width = "numeric",
+                                           petal_length = "numeric",
+                                           petal_width = "numeric",
+                                           species = "character"))
+s4_flower = new("flower", sepal_length = 2, sepal_width = 3,
+                petal_length = 10, petal_width = 32, species = "rose")
+s3_flower
+s4_flower
+
+isS4(s3_flower)
+isS4(s4_flower) 
