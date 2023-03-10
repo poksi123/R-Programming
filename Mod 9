@@ -1,0 +1,40 @@
+library(ggplot2)
+library(lattice)
+
+data = read.csv("USArrests.csv")
+data
+
+
+##GGPLOT 
+ggplot(data, aes(x = X, y = Murder))        
+state_mr = aggregate(data$Murder, by=list(data$X), FUN = mean)       
+colnames(state_mr) = c("State","MurderRate")
+state_mr = state_mr[order(state_mr$MurderRate), ]
+state_mr$State = factor(state_mr$State, levels = state_mr$State)
+head(state_mr, 4)
+
+ggplot(state_mr,aes(x=State,y=MurderRate)) + 
+     geom_bar(stat = "identity", width=.5, fill="tomato3") +
+     labs(title = "Low to High MurderRate by State") +
+     theme(axis.text.x = element_text(angle = 90, vjust = .6))
+
+##Base R
+base = data[order(data$Murder, decreasing = FALSE),]
+barplot(base$Murder, names.arg = base$X, col = "blue",ylab = "MurderRate per 100k",
+        main = "         MurderRate by State 
+        low to high",
+        las = 3)
+
+
+
+##LATTICE
+
+base$X = reorder(base$X,base$Murder)
+barchart(base$Murder ~ base$X,
+         scales = list(x=list(rot = 90), 
+                       xlab = "State", 
+                       ylab = "Murder Rate per 100k"))
+
+
+
+ 
