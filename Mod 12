@@ -1,0 +1,28 @@
+---
+title: "Mod 12"
+output: html_document
+date: "2023-04-02"
+---
+
+# Understanding a markdownguide
+After some research, I can see that the markdownguide is extremely useful in organizing documents to be presented to others. My other professor actually formats all of her assignments with this and it has made finishing projects extremely easy as the steps are header 2 with a collapsible section for your code. 
+
+To denote a bold text, you have to add two astericks before and after the text or string of texts you'd like to have **bolded**. You will know that you've done it right by that word or string being highlighted in *blue*. For italization, it is just one asterisk on each side. 
+
+## Step 1: Provide a summary of the data you'd like to use today 
+
+```{r cars}
+summary(cars)
+```
+
+## Including Plots
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+barplot(cars$speed,cars$dist)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+
+
+ 
