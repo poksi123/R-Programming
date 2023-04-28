@@ -1,0 +1,13 @@
+Package: tweetcleaner
+Title: tweetcleaner
+Version: 0.1
+Authors@R: 
+    person("Marc", "Flores", , "marcflores@usf.edu", role = c("aut", "cre"),
+           comment = c(ORCID = "YOUR-ORCID-ID"))
+Description: This function allows users to clean tweets for sentiment analysis.
+License: `use_mit_license()`
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.2.3.9000
+Imports: 
+    dplyr
